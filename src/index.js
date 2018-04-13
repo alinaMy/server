@@ -5,7 +5,9 @@ import calcRouter from './modules/calc/calcRoutes';
 import productRouter from './modules/product/productRoutes';
 import message from './modules/messages/messages';
 
+
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // ===== LOGGER =====
 app.use(morgan('dev'));
@@ -41,6 +43,6 @@ app.use((error, req, res, next) => { // eslint-disable-line no-unused-vars
 });
 
 // ===== PORT =====
-app.listen(5000, () => {
-  console.log('Example app listening on port 5000');
+app.listen(PORT, () => {
+    console.log(`Listening on ${ PORT }`);
 });
