@@ -7,7 +7,10 @@ import message from './modules/messages/messages';
 
 
 const app = express();
+const cool = require('cool-ascii-faces');
 const PORT = process.env.PORT || 5000;
+
+app.get('/cool', (req, res) => res.send(cool()));
 
 // ===== LOGGER =====
 app.use(morgan('dev'));
