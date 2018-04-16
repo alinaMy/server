@@ -14,3 +14,7 @@ export const postDiv = (req, res) => {
     let div = req.body.a / req.body.b;
     res.status(200).json({div});
 };
+
+export const getCalc = (req, res) => {
+    res.status(200).json('Welcome to Calculator');
+};
